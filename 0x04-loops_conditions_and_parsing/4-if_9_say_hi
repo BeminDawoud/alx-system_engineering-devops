@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# pending
+i=0
+while ((i<10))
+do
+	echo "Holberton School"
+	let "i+=1"
+	if ((i == 9))
+	then
+		echo "Hi"
+	fi
+
+done;

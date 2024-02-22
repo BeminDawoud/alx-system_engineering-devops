@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# -d -: divide the line in items
+# -f2: take the second item
+for name in *;
+do
+	echo "$name" | cut -d'-' -f2
+done
