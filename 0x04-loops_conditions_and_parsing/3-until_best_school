@@ -3,6 +3,6 @@
 c=0
 until ((c == 10))
 do
-	echo "Holberton School"
+	echo "Best School"
 	let "c+=1"
 done
