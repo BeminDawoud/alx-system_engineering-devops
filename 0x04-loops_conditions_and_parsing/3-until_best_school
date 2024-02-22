@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-# pending
-c=0
-until ((c == 10))
-do
-	echo "Best School"
-	let "c+=1"
-done
