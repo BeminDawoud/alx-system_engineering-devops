@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#Devops
+h=0
+while ((h<13))
+do
+	echo "Hour: $h";
+	s=1
+	while ((s<60))
+	do
+		echo "$s"
+		let "s+=1"
+	done
+	let "h=h+1"
+done;

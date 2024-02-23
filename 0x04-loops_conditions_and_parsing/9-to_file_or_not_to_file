@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#Devops
+name="holbertonschool"
+if [ ! -e ./$name ];
+then
+	echo "$name file does not exist"
+else
+	echo "$name file exists"
+	if [ ! -s ./$name ];
+	then
+		echo "$name file is empty"
+	else
+		echo "$name file is not empty"
+	fi
+	if [ ! -d ./$name ];
+	then
+		echo "$name is a regular file"
+	fi
+fi
