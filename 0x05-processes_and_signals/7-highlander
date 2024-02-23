@@ -1,8 +1,13 @@
 #!/usr/bin/env bash
 #Devops
-trap "echo I am invincible!!!" SIGTERM
-while ((1))
-do
-	echo "To infinity and beyond"
-	sleep 2
+stop_loop() {
+    echo "I am invincible!!!"
+    exit 0
+}
+
+trap stop_loop SIGTERM
+
+while true; do
+    echo "To infinity and beyond"
+    sleep 2
 done
