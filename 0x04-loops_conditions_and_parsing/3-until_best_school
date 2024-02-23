@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Devops
+c=0
+until ((c == 10))
+do
+	echo "Best School"
+	let "c+=1"
+done

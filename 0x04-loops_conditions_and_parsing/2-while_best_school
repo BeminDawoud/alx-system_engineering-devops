@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
-#Devops
-for ((i=0;i<10;i++))
+# Devops
+i=0
+while ((i<10))
 do
 	echo "Best School";
+	let "i+=1"
 done;
