@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#Devops
+p4=$(pgrep -f 4-to_infinity_and_be)
+kill "$p4"
