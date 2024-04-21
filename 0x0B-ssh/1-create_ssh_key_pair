@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #create an ssh key pair
 
-ssh-keygen -f ~/.ssh/school -b 4096 ubuntu@54.160.111.110
+ssh-keygen -f ~/.ssh/school -b 4096 -N betty
