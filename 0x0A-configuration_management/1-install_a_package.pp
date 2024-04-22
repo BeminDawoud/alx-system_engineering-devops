@@ -3,6 +3,9 @@
 package { 'python3':
   ensure => installed,
 }
+package { 'Werkzeug':
+  ensure   => '2.1.1',
+}
 exec { 'install_flask':
   command => '/usr/bin/pip3 install Flask==2.1.0',
 }
