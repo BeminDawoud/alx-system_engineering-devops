@@ -4,7 +4,7 @@ package { 'python3-pip':
   ensure => installed,
 }
 package { 'werkzeug':
-  ensure   => installed,
+  ensure   => '2.0.2',
   provider => 'pip3',
   require  => Package['python3-pip'],
 }
