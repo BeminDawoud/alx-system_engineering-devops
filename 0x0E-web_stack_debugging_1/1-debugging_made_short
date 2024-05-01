@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 #fix connection to port 80
-sudo apt remove nginx
-sudo apt install nginx 
-sudo nginx
+rm /etc/nginx/sites-enabled/default
+ln -s //etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx restart
