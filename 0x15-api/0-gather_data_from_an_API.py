@@ -35,4 +35,3 @@ if __name__ == "__main__":
     )
     for task in task_list:
         print(f"\t {task}")
-
