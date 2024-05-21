@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Get tasks for user
+Get tasks for user in a csv file
 """
 import requests
 import sys
@@ -26,7 +26,7 @@ if __name__ == "__main__":
     for task in tasks:
         task_list.append([id, user_name, task["title"], task["completed"]])
 
-with open(f"{id}.csv", "w") as file:
-    csv_writer = csv.writer(file, quoting=csv.QUOTE_ALL)
-    for task in task_list:
-        csv_writer.writerow(task)
+    with open(f"{id}.csv", "w") as file:
+        csv_writer = csv.writer(file, quoting=csv.QUOTE_ALL)
+        for task in task_list:
+            csv_writer.writerow(task)
