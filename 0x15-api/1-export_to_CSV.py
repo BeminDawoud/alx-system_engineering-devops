@@ -2,9 +2,10 @@
 """
 Get tasks for user in a csv file
 """
+import csv
 import requests
 import sys
-import csv
+
 
 
 if __name__ == "__main__":
@@ -24,7 +25,7 @@ if __name__ == "__main__":
     task_list = []
 
     for task in tasks:
-        task_list.append([id, user_name, task["title"], task["completed"]])
+        task_list.append([id, user_name, task["completed"], task["title"]])
 
     with open(f"{id}.csv", "w") as file:
         csv_writer = csv.writer(file, quoting=csv.QUOTE_ALL)
