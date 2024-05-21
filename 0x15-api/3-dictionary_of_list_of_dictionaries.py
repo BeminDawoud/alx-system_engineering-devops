@@ -18,7 +18,7 @@ if __name__ == "__main__":
     for user in users:
         user_list = []
         for task in tasks:
-            if user["id"] == task["userID"]:
+            if user["id"] == task["userId"]:
                 task_dict = {}
                 task_dict["task"] = task.get("title")
                 task_dict["completed"] = task.get("completed")
