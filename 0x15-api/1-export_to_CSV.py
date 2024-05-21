@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
     user = requests.get(user_url, params=user_p).json()
 
-    user_name = user[0]["name"]
+    user_name = user[0]["username"]
 
     tasks = requests.get(task_url, params=task_p).json()
 
