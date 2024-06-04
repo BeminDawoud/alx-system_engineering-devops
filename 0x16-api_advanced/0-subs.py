@@ -7,14 +7,14 @@ import sys
 
 
 def number_of_subscribers(subreddit):
-    url = f'https://www.reddit.com/r/{subreddit}/.json'
-    headers = {'User-Agent': 'MyRedditApp/0.1 by YourUsername'}
+    """returns the number of subscribers for a given subreddit."""
+    url = f'https://www.reddit.com/r/{subreddit}/about.json'
+    headers = {'User-Agent': 'MyRedditApp/0.1 by Bemin'}
     try:
-        response = requests.get(url, headers=headers)
-        children = response.json().get('data').get('children')
-        subs = children[0].get("data").get("subreddit_subscribers")
-        if subs:
-            return children[0].get("data").get("subreddit_subscribers")
+        response = requests.get(url, headers=headers, allow_redirects=False)
+        if response.status_code == 200:
+            subs = response.json().get('data').get('subscribers')
+            return subs
         else:
             return 0
     except Exception:
