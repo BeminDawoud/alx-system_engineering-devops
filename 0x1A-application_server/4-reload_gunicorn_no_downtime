@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# reload Gunicorn in a graceful way
+PIDS=$(pgrep -f gunicorn)
+
+# Iterate over each PID
+for PID in $PIDS; do
+    kill -s TERM $PID 
+done
+sudo systemctl stop gunicorn
+sudo systemctl start gunicorn
